@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 2</title>
+  <script src="https://code.angularjs.org/1.7.2/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-app="alert">
+  <div ng-controller="alertCtrl">
+    <button ng-click="alert()">alert</button>
+  </div>
+  <script>
+  var app = angular.module('alert',[]);
+  app.controller('alertCtrl',['$scope','$window',function($scope, $window){
+    $scope.alert = function(alert) {
+      $window.alert('Bonjour');
+    };
+  }]);
+</script>
+</body>
+</html>
